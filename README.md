@@ -63,6 +63,7 @@ Transfer learning is a deep learning technique where we use a pre-defined and pr
 ### Download
 ~~~bash
 git clone https://github.com/metehanozdeniz/brain-tumor.git
+cd brain-tumor
 ~~~
 
 ### Install Dependencies
@@ -73,7 +74,6 @@ pip install -r requirements.txt
 
 ### Execute
 ~~~bash
-cd brain-tumor/website
 python -m flask --app ./app.py run
 ~~~
 
