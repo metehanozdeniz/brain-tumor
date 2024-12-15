@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Brain Tumor Classifier with CNN</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="file">Upload the MRI:</label>
+        <input type="file" name="file" id="file" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if filename %}
+    <h2>Result</h2>
+    <div>
+        <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image" style="width: 300px;">
+        <p><strong>Prediction:</strong> {{ prediction }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 <a href="https://metehanozdeniz.com/" target="_blank">Metehan Özdeniz</a> & <a href="https://www.linkedin.com/in/abdulsamet-kuk-09455a222/" target="_blank">Abdulsamet Kuk</a> | All Rights Reserved.</p>
+    </div>
+</body>
+</html>

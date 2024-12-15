@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+img {
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed; /* fixed*/
+    bottom: 0;
+    width: 100%;
+}
+
+/* link style */
+a {
+    color: #0078FF; /* Canlı mavi renk */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    font-weight: bold; /* Kalın font */
+    font-size: 1.1em; /* Biraz daha büyük yazı */
+    position: relative; /* Alt çizgi animasyonu için */
+    transition: color 0.3s ease, transform 0.3s ease; /* Renk ve büyüme geçişleri */
+}
+
+/* Alt çizgi eklemek için efekt */
+a::after {
+    content: ""; /* Pseudo-element için içerik */
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Linkin hemen altına */
+    width: 0; /* Başlangıçta görünmez */
+    height: 2px; /* İnce çizgi */
+    background: linear-gradient(90deg, #0078FF, #00D4FF); /* Gradient renk */
+    transition: width 0.3s ease; /* Genişleme animasyonu */
+}
+
+/* Hover durumu: Renk değişimi ve alt çizgi genişlemesi */
+a:hover {
+    color: #00D4FF; /* Gradientteki açık renk */
+    transform: scale(1.05); /* Hafif büyüme efekti */
+}
+
+a:hover::after {
+    width: 100%; /* Alt çizgi tamamen görünür */
+}
+
+/* Aktif durum (tıklanınca) */
+a:active {
+    color: #004E8A; /* Daha koyu bir mavi tonu */
+}
+
+/* Ziyaret edilmiş linkler */
+a:visited {
+    color: #6A5ACD; /* Morumsu renk */
+}
